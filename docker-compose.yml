@@ -1,8 +1,8 @@
 sshd:
   image: indiehosters/sshd
   volumes:
-    - $PATH:/share$OPTION
+    - $SHARED_PATH/share$OPTION
     - ./ssh:/root/.ssh
     - ./etc-ssh:/etc/ssh
   ports:
-    - "$PORT:22"
+    - "${PORT}22"
