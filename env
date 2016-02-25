@@ -1,0 +1,3 @@
+PATH=/my/mount/to/share/on/ssh
+OPTION=ro
+PORT=12345

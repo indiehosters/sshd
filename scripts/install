@@ -1,0 +1,11 @@
+#!/bin/bash -eux
+
+mkdir ssh
+ssh-keygen -f ssh/id_rsa -N '' -t rsa
+
+mkdir etc-ssh
+cd etc-ssh
+ssh-keygen -f ssh_host_rsa_key -N '' -t rsa
+cp /etc/ssh/moduli .
+cp /etc/ssh/ssh_config .
+cp /etc/ssh/sshd_config .
